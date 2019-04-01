@@ -1,0 +1,84 @@
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+// import logo from './logo.svg';
+import './App.css';
+import AppRouter from './router'
+// import classNamees from '*.module.scss';
+// import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
+
+
+className App extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      headerContent : "This is Header content....",
+      contentText : "This is content text !!!!!"
+    }
+    this.findDomHandler = this.findDomHandler.bind(this);
+    this.updateHeader = this.updateHeader.bind(this);
+    // this.updateContentText = this.updateContentText(this);
+    this.updateState = this.updateState.bind(this);
+  };
+  findDomHandler(){
+    var myDiv = document.getElementById("myDiv");
+    ReactDOM.findDOMNode(myDiv).style.color = "red";
+  }
+  updateHeader(e){
+     this.setState({
+      headerContent :e.target.value
+     });
+  }
+
+  updateState(e){
+    this.setState({
+      contentText: e.target.value
+    });
+  }
+
+
+  render(){
+    return(
+      // <div>
+      //   <h1>{this.state.headerContent}</h1>
+      //   <Header headerContent = {this.state.headerContent} ></Header><br/>
+      //   <input type = "text" value = {this.state.headerContent} onChange = {this.updateHeader} ></input>
+      //   <Content contentText = {this.state.contentText } updateStateProp = {this.updateState}/>
+      //   <button onClick = {this.findDomHandler} > FIND DOM NODE</button>
+      //   <div id = "myDiv">NODE</div>
+      // </div>
+      <div>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>ContactUs</li>
+        </ul>
+        { this.props.children }
+      </div>
+    )
+  }
+}
+
+className Header extends React.Component{
+  render(){
+    return(
+      <h1>{ this.props.headerContent } </h1>
+    )
+  }
+}
+// --------------------------------
+className Content extends React.Component{
+  render(){
+    return(
+     <div>
+        <h3> {this.props.contentText} </h3>
+        <p>The content text!!!</p>
+        <div>
+          Enter Content text: 
+          <input type = "text" value = {this.props.contentText} onChange = {this.props.updateStateProp}/>
+        </div>
+
+     </div>
+    )
+  }
+}
+export default App; 

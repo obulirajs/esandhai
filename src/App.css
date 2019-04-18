@@ -58,4 +58,8 @@
       display: none; 
     }
   }
+
+  .page-height{
+    height: 600px;
+  }
   /* </style> */

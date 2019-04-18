@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## First time download and setup guide
+1 - Open Windows explorer
+2 - Right click there and do a git bash
+3 - From the git command prompt run the below command in command line
+    > git clone  https://github.com/obulirajs/esandhai.git
+    this will download the code from master branch
+4 - Once the code download is complete cd to "esandhai" folder
+5 - Run "npm install" in the command promt to install dependent libraries. If you face problem in "npm install" cpmmand
+    manually run npm install for dependencies.
+    Ex: npm install react@16.8.5 (@16.8.5 is optional parameter. By providing @16.8.5 we are specifying the particular version to be installed)
 ## Available Scripts
 
 In the project directory, you can run:

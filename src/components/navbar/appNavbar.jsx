@@ -5,7 +5,7 @@ class AppNavbar extends React.Component{
         return(
             <div>
                 <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
-                    <a className="navbar-brand" href="#">Logo</a>
+                    <a className="navbar-brand" href="#">eSandhai</a>
                     <ul className="navbar-nav">
                         <li className="nav-item">
                         <a className="nav-link" href='/home' >Home</a>

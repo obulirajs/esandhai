@@ -1,0 +1,21 @@
+.banner-home{
+    width: 1072px;
+    margin-top: 20px;
+}
+
+.header-template{
+    margin-top: 20px;
+    width: 240px;
+    height: 160px;
+    -webkit-flex: 0 0 25.333333%;
+}
+
+.image-size{
+    width: 240px;
+    height: 160px;
+}
+
+.tile-width{
+    width: 240px;
+    font-size: 12px;
+}
